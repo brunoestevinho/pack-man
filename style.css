@@ -1,9 +1,15 @@
+body {
+	background-color: black;
+}
+
 .grid {
   display: flex;
+  margin: auto;
   flex-wrap: wrap;
   width: 560px;
   height: 560px;
-  border: solid black;
+  border: solid white;
+  background-color: black;
 }
 
 .grid div {
@@ -12,13 +18,13 @@
 }
 
 .pac-dot {
-  background-color: green;
-  border: 5px solid white;
+  background-color: lightblue;
+  border: 5px solid black;
   box-sizing: border-box;
 }
 
 .wall {
-  background-color: blue;
+  background-color: grey;
 }
 
 .power-pellet {
@@ -54,4 +60,15 @@
 .pac-man {
   background-color: yellow;
   border-radius: 10px;
+}
+
+h3 {
+	text-align: center;
+  	flex-wrap: wrap;
+  	width: 560px;
+	background-color: yellow;
+	border-style: solid;
+	border-color: yellow;
+	margin: auto;
+	font-family: 'Press Start 2P', cursive;
 }

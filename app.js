@@ -127,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	function powerPelletEaten(){
 		if (squares[pacmanCurrentIndex].classList.contains('power-pellet')){
 			score += 10
+			scoreDisplay.innerHTML = score
 			ghosts.forEach(ghost => {
 				ghost.isScared = true
 			})
@@ -187,10 +188,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			//eat scared ghost
 			if (ghost.isScared && squares[ghost.currentIndex].classList.contains('pac-man')) {
-				console.log('eat ghost')
 				squares[ghost.currentIndex].classList.remove(ghost.className, 'ghost', 'scared-ghost')
 				ghost.currentIndex = ghost.startIndex
 				score += 100
+				scoreDisplay.innerHTML = score
 				squares[ghost.currentIndex].classList.add(ghost.className, 'ghost')
 			}
 			checkForGameOver()
